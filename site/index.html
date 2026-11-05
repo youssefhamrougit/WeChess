@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="no-referrer">
+<title>WeChess — chess game review for Android</title>
+<meta name="description" content="WeChess reviews your chess games with Stockfish: move classifications, accuracy statistics and explanations, in a zero-JavaScript HTML/CSS interface.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>WeChess</a>
+  <nav class="nav" aria-label="Main">
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="https://github.com/OWNER/REPO">Source</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Android · C++17 · Stockfish · no JavaScript</p>
+    <h1>Your games, reviewed honestly.</h1>
+    <p class="lede">
+      Import a PGN and step through it with an evaluation bar, a classification for
+      every move, accuracy statistics and plain-English explanations. The engine
+      supplies the truth; the words only explain it.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/OWNER/REPO/releases/latest">Download the APK</a>
+      <a class="btn ghost" href="https://github.com/OWNER/REPO">Read the source</a>
+    </div>
+    <p class="fineprint">
+      Debug build, Android 8.0+ (arm64-v8a and x86_64). Bundled Stockfish is
+      GPL-3.0; the source is in the same repository.
+    </p>
+  </div>
+
+  <div class="hero-board" aria-hidden="true">
+    <div class="eval"><span></span></div>
+    <div class="board">
+      <div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div>
+      <div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark last"></div><div class="sq light last"></div>
+      <div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div>
+      <div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div>
+      <div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div>
+      <div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div>
+      <div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div>
+      <div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div><div class="sq dark"></div><div class="sq light"></div>
+    </div>
+    <ul class="moves">
+      <li><span class="san">e4</span><span class="tag best">Best</span></li>
+      <li><span class="san">e5</span><span class="tag book">Book</span></li>
+      <li><span class="san">Nf3</span><span class="tag best">Best</span></li>
+      <li><span class="san">Nc6</span><span class="tag book">Book</span></li>
+      <li><span class="san">Bb5</span><span class="tag excellent">Excellent</span></li>
+      <li><span class="san">a6</span><span class="tag good">Good</span></li>
+      <li><span class="san">Ba4</span><span class="tag inaccuracy">Inaccuracy</span></li>
+      <li><span class="san">Nf6</span><span class="tag best">Best</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <h2>Built like a chess tool, not a dashboard</h2>
+  <div class="grid">
+    <article>
+      <h3>Stockfish decides</h3>
+      <p>Every evaluation, best move and principal variation comes from a real UCI engine at a depth you choose. A deeper second pass runs on critical positions.</p>
+    </article>
+    <article>
+      <h3>Nine classifications</h3>
+      <p>Brilliant, Great, Best, Excellent, Good, Book, Inaccuracy, Mistake, Blunder — derived from win-probability loss, not raw centipawns.</p>
+    </article>
+    <article>
+      <h3>Accuracy that is explained</h3>
+      <p>A documented formula, per phase, with the limitations written down. No claim to reproduce anyone's proprietary numbers.</p>
+    </article>
+    <article>
+      <h3>Zero JavaScript</h3>
+      <p>HTML and CSS only. A C++ backend serves the pages over loopback and the WebView runs with scripting disabled.</p>
+    </article>
+    <article>
+      <h3>Real opening book</h3>
+      <p>Book moves come from the CC0 Lichess opening data, never from a language model, and a book label can never hide a blunder.</p>
+    </article>
+    <article>
+      <h3>Explanations, grounded</h3>
+      <p>Gemini receives the engine's findings through a proxy you host and is told to use nothing else. No key ever ships inside the app.</p>
+    </article>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <h2>From PGN to review in three steps</h2>
+  <ol>
+    <li><strong>Import.</strong> Pick a .pgn file or paste the notation.</li>
+    <li><strong>Analyse.</strong> Stockfish scores every position, with progress you can watch and cancel.</li>
+    <li><strong>Review.</strong> Walk the board, read each classification and the per-move panel, then ask for an explanation.</li>
+  </ol>
+</section>
+
+<section class="note">
+  <h2>Why this page is not the app</h2>
+  <p>
+    WeChess's logic is a native C++ server, so it runs on Android, not in a
+    serverless host. This site is the download and documentation page; the APK is
+    built by GitHub Actions from the same repository.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <span>WeChess · MIT · Stockfish is GPL-3.0 · Gemini explanations are optional</span>
+</footer>
+
+</body>
+</html>

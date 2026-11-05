@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="no-referrer">
+<title>{{title}}</title>
+<link rel="stylesheet" href="/app.css">
+{{head_extra}}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="/" aria-label="WeChess home"><span class="brand-mark" aria-hidden="true"></span>WeChess</a>
+  <nav class="topnav" aria-label="Main">
+    <a class="navlink {{nav_games}}" href="/">Games</a>
+    <a class="navlink {{nav_settings}}" href="/settings">Settings</a>
+  </nav>
+</header>
+<main class="page" id="main">
+{{content}}
+</main>
+<footer class="foot">
+  <span>Engine analysis by Stockfish. Explanations by Gemini, grounded in Stockfish data.</span>
+</footer>
+</body>
+</html>

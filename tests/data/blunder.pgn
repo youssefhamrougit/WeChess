@@ -1,0 +1,11 @@
+[Event "Annotated miniature"]
+[Site "?"]
+[Date "2024.03.03"]
+[Round "3"]
+[White "Student"]
+[Black "Coach"]
+[Result "0-1"]
+[ECO "A00"]
+
+1. f3 {A weak first move, but playable.} e5 2. g4?? {Fool's Mate is now
+available.} Qh4# 0-1

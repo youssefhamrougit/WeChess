@@ -1,0 +1,10 @@
+[Event "Promotion tactics"]
+[Site "?"]
+[Date "2024.02.02"]
+[Round "2"]
+[White "Promoter"]
+[Black "Defender"]
+[Result "1-0"]
+[Annotator "WeChess tests"]
+
+1. h4 g5 2. hxg5 h6 3. gxh6 Bg7 4. hxg7 Nc6 5. gxh8=Q {Promotes with check.} 1-0
